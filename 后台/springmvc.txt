@@ -1,0 +1,69 @@
+1.springmvc
+			1.核心配置文件：springmvc.xml(重点)
+				<?xml version="1.0" encoding="UTF-8"?>
+					<beans xmlns="http://www.springframework.org/schema/beans"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xmlns:p="http://www.springframework.org/schema/p"
+						xmlns:context="http://www.springframework.org/schema/context"
+						xmlns:mvc="http://www.springframework.org/schema/mvc"
+						xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+						http://www.springframework.org/schema/mvc
+						http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-4.0.xsd
+					">
+						<!-- 配置 controller 扫描包 -->
+						<context:component-scanbase-package="com.yoyiyi.controller，其他" />
+						<!-- 配置处理器映射器 -->
+						<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+						<!-- 注解驱动 --> 代替上面
+						<mvc:annotation-driven />
+					</beans>
+					
+			2.配置DispatcherServlet
+				 web.xml
+				 <!-- 配置 SpringMVC 前端控制器 -->
+				<servlet>
+					<servlet-name>springmvc-first</servlet-name>
+					<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+					<!-- 指定 SpringMVC 配置文件 -->
+					<!-- SpringMVC 的配置文件的默认路径是	/WEB-INF/${servlet-name}-servlet.xml -->
+					<init-param>
+						<param-name>contextConfigLocation</param-name>
+						//配置路径
+						<param-value>classpath:springmvc.xml</param-value>
+					</init-param>
+				</servlet>
+				<servlet-mapping>
+					<servlet-name>springmvc-first</servlet-name>
+						<!-- 设置所有以 action 结尾的请求进入 SpringMVC -->
+					<url-pattern>*.action</url-pattern>
+				</servlet-mapping>
+
+2.注解
+		1.@Controller    类
+		2.@ResquestMapping（/ceshi.action） 方法
+		
+3.框架架构
+
+4.三大组件
+          1.处理器映射器
+		  2.处理器适配器
+		  3.试图解析器
+5.视图解析器
+			1.<!-- 配置视图解析器 -->
+				<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+					<!-- 配置逻辑视图的前缀 -->
+					<property name="prefix" value="/WEB-INF/jsp/" />
+					<!-- 配置逻辑视图的后缀 -->
+					<property name="suffix" value=".jsp" />
+				</bean>
+				最终 jsp 物理地址：前缀+ 逻辑视图名+后缀
+				modelAndView.setViewName("itemList");
+6.spring和mybatis整合
+
+7.
+
+			
+						
