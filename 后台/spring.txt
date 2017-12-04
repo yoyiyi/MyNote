@@ -85,6 +85,28 @@
 			WebApplicationContext  applicationContext
 				=WebApplicationContextUtils.getWebApplicationContext(ServletActionContext.getServletContext());
 			
-			
-			
-			
+12.注解扫描	
+           <!-- Spring 的注解开发:组件扫描(类上注解: 可以直接使用属性注入的注解) -->
+		   1.<context:component-scan base-package="包"/>
+           2.@Component(value="nameDao")	
+		   
+13.常用类注解
+		   1.@Controller  :	 WEB  层
+           2.@Service : 	 业务层
+           3.@Repository  :	 持久层 dao
+14.属性注入注解（可以不用提供set方式）
+				1.@Value :用于注入普通类型.
+				2.@Autowired :自动装配:
+					*  默认按类型进行装配.
+					
+				*  按名称注入:
+					3.@Qualifier:
+						*  强制使用名称注入.
+					4.@Resource 
+						*  相当于:@Autowired 和@Qualifier 一起使用（自动装配、强制名称注入）
+15.bean的注解范围
+				1.@Scope
+						singleton 单例
+						prototype 多例
+				2.@PostConstruct   init-method
+				3.@PreDestory      destroy-method
