@@ -1,0 +1,6 @@
+﻿一、核心：控制反转（ioc） 面向切面（aop） 分层的javaee/eefull-stack（一站式）轻型开源框架
+二、web三层架构
+    web
+    service
+    dao
+三、
