@@ -1,6 +1,90 @@
-﻿一、核心：控制反转（ioc） 面向切面（aop） 分层的javaee/eefull-stack（一站式）轻型开源框架
-二、web三层架构
+﻿1、核心：控制反转（ioc：inversion of control 对象的创建权反转控制给spring，目的解耦合） 面向切面（aop） 分层的javaee/eefull-stack（一站式）轻型开源框架
+2、web三层架构
     web
     service
     dao
-三、
+	
+3、引入
+        log4j.properties
+        applicationContext.xml
+4、ioc、di（依赖注入 degger2）
+
+5、ApplicationContext获取
+		ClassPathXmlApplicationContext :加载类路径下 Spring 的配置文件.
+		FileSystemXmlApplicationContext :加载本地磁盘下 Spring 的配置文件
+		
+6、<bean>
+     id
+	 scope: singleton  单例
+			prototype  多例
+	 生命周期
+			init-method
+			destroy-method
+			
+7、生成bean
+    1.无参构造 
+	2.静态工厂 bean中配置 factory-method
+    2.实例化工厂 
+	
+8、bean属性注入
+	1.构造方法  <constructor-arg name="name" value="fk"/>
+	2.set       <property name="name" value="fk"/>
+	
+9、属性注入
+	1.对象类型注入
+				 <property name="name" value="fk"/>
+				 <!-- ref 属性：引用另一个 bean 的 id 或 name -->
+				 <property name=" "   ref="fk"/>
+	2.名称控件p
+				* 普通属性:      p:属性名称=””       p:name = "fk"
+				* 对象类型属性:  p:属性名称-ref=””   p:name-ref="fk"
+	3.SpEl
+			<property name="name" value="#{'fk'}"/>
+			<property name="name" value="#{另一个bean的id或者name}"/>
+			<property name="name" value="#{name.sex}"/>
+	4.list
+				<property name="arrs">
+					<list>
+						<value>1</value>
+						<value>2</value>
+					</list>
+				</property>
+	5.map
+			<property name="map">
+				<map>
+					<entry key="aaa" value="111"/>
+					<entry key="bbb" value="222"/>
+					<entry key="ccc" value="333"/>
+				</map>
+			</property>
+	6.properties
+				<property name="properties">
+					<props>
+						<prop key="username">root</prop>
+						<prop key="password">123456</prop>
+					</props>
+				</property>	
+
+10、分配置文件开发
+					1.加载多个文件 
+						new ClassPathXmlApplicationContext("applicationContext.xml","applicationContext2.xml");
+					2.在配置文件中
+						<import resource="applicationContext2.xml"/>
+
+11.配置spring 一个工程只能有一个spring的工厂
+			1.配置监听器:
+					<listener>
+						<listener-class>org.springframework.web.context.ContextLoaderListener</listener-
+						class>
+					</listener>
+					<context-param>
+						<param-name>contextConfigLocation</param-name>
+						<param-value>classpath:applicationContext.xml</param-value>
+					</context-param>
+			2.配置action	  
+			WebApplicationContext  applicationContext
+				=WebApplicationContextUtils.getWebApplicationContext(ServletActionContext.getServletContext());
+			
+			
+			
+			
