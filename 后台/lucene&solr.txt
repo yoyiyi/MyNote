@@ -1,0 +1,57 @@
+1.数据分类
+			1.结构化数据
+			2.非结构数据
+
+2.非结构数据查询方法
+			1.顺序扫描法
+			2.全文检索
+
+3.爬虫采集数据
+			1.Nutch
+			2.jsoup
+			3.heritrix
+4.采用POI读取doc、xls文件
+
+5.倒排索引结构
+
+6.Lucene
+        1.使用Luke可以查看索引文件
+		
+7.创建索引、查询索引、中文分词、索引库维护（加入document对象）、索引库删除、修改、
+
+8.Lucene索引库查询（*****）
+			1.Query
+			2.QueryParse
+			3.MathAllDocsQuery
+			4.TermQuery
+			5.NumericRangeQuery
+			6.BooleanQuery   组合查询
+			
+9.QueryParse\查询语法(略)
+
+10.MultiFieldQueryParser   可以指定多个默认搜索域
+
+11.步骤
+       创建
+			1.获取文件
+			2.创建文档对象
+			3.创建分析器
+			4.保存索引及文档到索引库
+	  搜索
+			1.用户接口
+			2.创建Query查询对象（KV）域名：值
+			3.执行查询
+			4.渲染
+
+12.solr搜索
+          1.运行环境
+					1.solr
+					2.jdk1.7
+					3.Tomcat
+
+13.solrclound
+
+14.solrj
+
+        
+			
