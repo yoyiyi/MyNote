@@ -15,8 +15,11 @@
 					">
 						<!-- 配置 controller 扫描包 -->
 						<context:component-scanbase-package="com.yoyiyi.controller，其他" />
+						
 						<!-- 配置处理器映射器 -->
 						<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+						<!-- 配置处理器适配器 -->
+						<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />			
 						<!-- 注解驱动 --> 代替上面
 						<mvc:annotation-driven />
 					</beans>
@@ -43,7 +46,9 @@
 
 2.注解
 		1.@Controller    类
-		2.@ResquestMapping（/ceshi.action） 方法
+		2.@ResquestMapping（/ceshi.action） 方法 类（指定前缀）@ResquestMapping("item")
+				@RequestMapping(method = RequestMethod.GET) 请求方法 数组 {}
+		3.@RequestParam(value="",required="true/false",defaultValue="")
 		
 3.框架架构
 
@@ -51,6 +56,7 @@
           1.处理器映射器
 		  2.处理器适配器
 		  3.试图解析器
+		  
 5.视图解析器
 			1.<!-- 配置视图解析器 -->
 				<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -61,9 +67,81 @@
 				</bean>
 				最终 jsp 物理地址：前缀+ 逻辑视图名+后缀
 				modelAndView.setViewName("itemList");
+				
 6.spring和mybatis整合
 
-7.
+7.springmvc默认支持类型
+				1.HttpServletRequest
+				2.HttpServletResponse
+				3.HttpSession
+				
+8.解决post乱码
 
-			
+9.解决get乱码
+
+10.自定义Converter解决date日期问题
+
+11.Model/ModelMap/ModelAndView
+
+12.自己编写主要是Handle和jsp（view）
+
+13.参数绑定
+			https://www.cnblogs.com/HD/p/4107674.html
+
+14.返回字符串
+			1.return "itemList"
+			2.Redirect重定向
+							return "redirect:/itemList.action?itemId=" ...
+			3.forward 转发
+							转发到另一个Controller
+                            return "forward:/itemList.action"
+15.自定义异常类 implement HandleExeptionResolver
+     1.配置<bean
+	 
+16.文件上传
+			1.commons-fileupload-1.2.2.jar
+			2.commons-io-2.4.jar
+			3.配置解析器
+						<!-- 文件上传,id必须设置为multipartResolver -->
+						<bean id="multipartResolver"class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+							<!-- 设置文件上传大小 -->
+							<property name="maxUploadSize" value="5000000" />
+						</bean>
 						
+17.json数据交互
+				1.@RequestBody               HttpMessageConverter
+				2.@ResponseBody
+				3.jackson
+				
+				4.不配置注解驱动<mvc:annotation-driven>必须提供json适配器
+				<!--处理器适配器 -->
+	            <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+					<property name="messageConverters">
+						<list>
+							<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>		
+						</list>
+		           </property>
+				</bean>
+				
+				http://blog.csdn.net/h3243212/article/details/50885288
+				
+18.restful支持
+				/**
+				 * 使用RESTful风格开发接口，实现根据id查询商品
+				 * 
+				 * @param id
+				 * @return
+				 */
+				@RequestMapping("item/{id}")
+				@ResponseBody
+				public Item queryItemById(@PathVariable() Integer id) {
+					Item item = this.itemService.queryItemById(id);
+					return item;
+				}
+				http://127.0.0.1/item/123?id=1
+				注意两个区别
+				1.@PathVariable是获取url上数据的。@RequestParam获取请求参数的（包括post表单提交）
+				2.如果加上@ResponseBody注解，就不会走视图解析器，不会返回页面，目前返回的json数据。如果不加，就走视图解析器，返回页面
+
+19.拦截器	实现HandlerInterceptor接口	 
+			http://blog.csdn.net/tonytfjing/article/details/39207551
