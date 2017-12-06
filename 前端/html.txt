@@ -1,1 +1,136 @@
 1.html
+		超文本标记语言
+
+2.标签
+		1.<strong> <b>  文本加粗
+		2.<em>   <i>    文本倾斜
+  		3.<del>  <s>    删除线
+		4.<ins>  <u>	下划线
+		5.<img>  alt title src width heigh
+		6.<hr>
+		7.<br>
+		8.<p>
+		9.<sup>3</sup>上标  <sub>2</sub> 下标
+		
+3.路径
+        相对
+			1.下一级 /
+			2.跳出   ../
+		绝对
+			\
+		
+4.超链接
+		<a href title target=(_self _blank)>
+		
+5.锚链接
+        1.<p  id="fk">
+		2.<a href="#fk">
+		空链 <a href = "#">
+		
+6.超链接优化
+			<basa target="_blank"> 所有链接都在新窗口 在head中
+			<head>
+				<base href="http://www.w3school.com.cn/i/" />
+				<base target="_blank" />
+			</head>
+
+7.特殊字符
+			https://www.cnblogs.com/web-d/archive/2010/04/16/1713298.html
+			常用
+			HTML 原代码	显示结果	描述
+			&lt;	<	小于号或显示标记
+			&gt;	>	大于号或显示标记
+			&amp;	&	可用于显示其它特殊字符
+			&quot;	“	引号
+			&reg;	®	已注册
+			&copy;	©	版权
+			&trade;	™	商标
+			&ensp;	 	半个空白位
+			&emsp;	 	一个空白位
+			&nbsp;		不断行的空白
+			
+8.列表
+		1.无序
+		     <ul type="square dis circle">//小方块 空心圆圈 实心圆圈
+			    <li></li>
+			 </ul>
+		2.有序
+			 <ol type="1 a A i I" start = "3">//类型  开始位置
+			   <li></li>
+			 <ol>
+		3.自定义
+			 <dl>
+				 <dt></dt>   小标题
+				 <dd></dd>   解释标题
+				 <dd></dd>   解释标题
+			 </dl>
+			 
+9.音乐标签
+        <embed src  hidden="">//路径  隐藏播放按钮 true false
+		
+10.滚动效果
+		<marquee  
+		    heigh
+			width
+			bgcolor
+			behavior =
+					alternate 来回滚
+					scroll    不会重复 一端滚到另一端
+					slide     会重复
+			direction =
+					down left right up
+					loop 滚动次数 -1：一直滚动
+			>
+		</marquee>
+		
+11.关键字
+        <meta name="keywords" content=
+
+12.网页描述
+		<meta name="description" content=
+		
+13.网页重定向
+		<meta http-quiv="refresh" content="5,http.baidu.com"
+		
+14.链接外部样式
+		<link rel="stylesheet" href="1.css">
+		
+15.设置icon图标
+        <link rel="icon" href="fk.ico">
+		
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+		注意：
+			1、favicon.icon路径为根目录，但不限于根目录
+			2、 href="/项目名/favicon.ico"  包含项目名的href只能在本地使用，linux环境会报错，所以建议不要加
+		
+16.表格
+      <table 
+	      cellspacing=  单元格与单元格距离
+		  cellpadding=   内容距边框距离
+		  align    //left right center
+	      bgcolor
+	    > 表格
+	  <caption> 表头
+	  <tr>    行
+	  <th>    表格标题 bordercolor 边框颜色
+	  <td
+         colspan=   合并同一行  横
+         rowspan=  合并同一列  竖	 
+		 valign = top middle  bottom  baseline  内容垂直方式
+	     >    列
+     
+       thead 元素应该与 tbody 和 tfoot 元素结合起来使用。
+	   <thead> <tbody> <tfoot>
+	   http://www.w3school.com.cn/tags/tag_thead.asp
+
+17.表单
+        1.表单域
+		       <form 
+			       action
+				   method="get post"
+		2.文本输入框
+		3.密码输入框
+		4.单选框
+		5.下拉列表
+		
