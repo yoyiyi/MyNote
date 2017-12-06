@@ -110,10 +110,10 @@
 		  cellpadding=   内容距边框距离
 		  align    //left right center
 	      bgcolor
-	    > 表格
+	    > 		表格
 	  <caption> 表头
-	  <tr>    行
-	  <th>    表格标题 bordercolor 边框颜色
+	  <tr>    	行
+	  <th>    	表格标题 bordercolor 边框颜色
 	  <td
          colspan=   合并同一行  横
          rowspan=  合并同一列  竖	 
@@ -130,7 +130,76 @@
 			       action
 				   method="get post"
 		2.文本输入框
+			   <input type="text"
+					  maxLength
+					  readonly    只读
+					  disabled    输入框激活状态
+					  name         
+					  value
+					  
 		3.密码输入框
+			   <input type="password"
 		4.单选框
+		       <input type="radio"
+			          checked
+					  name    将那么设置一样才能有效果
 		5.下拉列表
+		       <select mltiple="multiple"      设置多选项
+			       <option 
+				           selected="selected" 设置成选中
+				    <optgroup label = "杭州">
+					<option value>滨江</option>
+					</optgroup>               对下拉列表分组
+			   例子		
+					<select>
+					  <optgroup label="Swedish Cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+					  </optgroup>
+					  <optgroup label="German Cars">  
+						<option value="mercedes">Mercedes</option>
+						<option value="audi">Audi</option>
+					  </optgroup>
+					</select>
+		6.多选框
+				<input type="checkbox" checked="checked">
+		7.多行文本框
+				<textarea clos="10" rows="10"
+		8.文件上传
+				<input type="file">
+		9.文件提交
+				<input type="submit">
+		10.普通按钮
+				<input type="button" value>
+		11.图片按钮
+				<input type="image" src
+		12.重置按钮
+				<input type="reset"
+		13.表单信息分组
+				<form action="1.php" method="post"
+				<fieldset>
+				<legend>分组信息</legend>
+				</fieldset>
+				</form>
+				
+				例子
+				<form>
+				  <fieldset>
+					<legend>健康信息</legend>
+					身高：<input type="text" />
+					体重：<input type="text" />
+				  </fieldset>
+				</form>
+				<p>如果表单周围没有边框，说明您的浏览器太老了。</p>
+		14.其他
+			 url(网址) date(日期) time(时间) email(邮件) number(数字  step="5") range(滑块)
+			 
+18.标签语义化
+			1.结构合理
+			2.少无语义标签 div span
+			3.div和p 使用p
+			4.strong em
+			5.css代替b font u等
+		
+			      
 		
