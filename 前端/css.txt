@@ -119,6 +119,27 @@
 			◆嵌套的盒子外边距塌陷
 				解决方法:   1.给父盒子设置边框
 							2.给父盒子overflow:hidden;   bfc   格式化上下文
+							
+16. 文档流 浮动布局（float：left  right）
+
+17.清除浮动 
+			1.clear：both
+			2.父元素 overflow：hidden
+			
+18.overflow
+			:visible
+			:hidden
+			:scroll
+			:auto
+			
+19.定位
+		定位方向: left  | right  | top  | bottom
+		position：static  静态定位。默认值，就是文档流
+		Position:absolute; 绝对定位
+		Position: relative; 相对定位
+		Position:fixed; 固定定位
+
+
 
 	   
 	   

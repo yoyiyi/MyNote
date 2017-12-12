@@ -113,6 +113,7 @@
 
 16.aop面向切面编程
 		aop可以进行权限校验、日志记录、性能监控、事务控制
+		http://www.cnblogs.com/xrq730/p/4919025.html
 		
 17.spring的aop（了解）
 	    两种代理机制
