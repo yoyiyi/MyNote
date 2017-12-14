@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Demo</title>
+		<script src="src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+		<!-- 1.基础语法 
+			 $(seletor).action
+		-->
+		<!-- 2.文档加载
+		  $(function(){
+		  })	
+		-->
+		<!-- 3.事件
+				1.在元素上移动鼠标
+				2.选取单选按钮
+				3.点击元素
+			  4.分类
+					  鼠标： click	、dbclick、 mouseenter(鼠标经过)、 mouseleave(鼠标离开)、mousedown、mouseup、hover、focus
+			                     键盘：keypress、keydowm、keyup
+			                     表单：submit、change、focus、blur(失去焦点)
+			                     文档/窗口：load、resize(窗口调整大小)、scroll、unload
+			  5.常用
+			   $(document).ready()
+			   $(function(){})
+		-->
+		<!-- 6.效果
+			 		1.隐藏和显示
+			 			hide() show() toggle()(开关 切换效果)--- $(selector).toggle(speed,callback)//fast slow 毫秒值
+			 		2.淡入淡出
+			 			fadeIn(speed,callback) fadeOut(--) fadeToggle(--) fadeTo(speed,opacity,callback)--透明度 0-1
+					3.滑动
+						slideDown(speed,callback) slideUp(--) sliedeToggle(--)
+                    4.动画
+                    	$(selector).animate({params},speed,callback);
+                    	操作多个属性  使用相对值  使用预定义的值 使用队列功能
+                    	例子： $("div").animate({left:'25 0px'});
+                    	      <div style="background:#98bf21;height:100px;width:100px;position:absolute;">
+                    	      	
+                    	       $("div").animate({height:'toggle'});
+                    	       
+                    	        div.animate({height:'300px',opacity:'0.4'},"slow");
+								div.animate({width:'300px',opacity:'0.8'},"slow");
+								div.animate({height:'100px',opacity:'0.4'},"slow");
+								div.animate({width:'100px',opacity:'0.8'},"slow");
+                    5.停止动画
+                    	stop stop(stopAll,gotoEnd)//是否停止全部  是否立即完成动画
+                    6.回调callback
+                    	例子：$("button").click(function(){
+								  $("p").hide("slow",function(){
+								    alert("段落现在被隐藏了");
+								  });
+								});
+					7.链
+						多个语句一起运行
+						$("#p1").css("color","red")
+				          .slideUp(2000)
+				         .slideDown(2000);	         
+		-->     
+		<!-- 
+			7.获取内容  text() html() val()
+			8.获取属性 attr()  alert($("#runoob").attr("href"));
+			9.设置内容和属性 text("Hello world!") html("<b>Hello world!</b>") val("RUNOOB")
+							attr()
+									 $("#runoob").attr("href","http://www.runoob.com/jquery");
+									 $("#runoob").attr({
+        								"href" : "http://www.runoob.com/jquery",
+       									 "title" : "jQuery 教程"
+   										 });
+				回调函数 
+						$("#test1").text(function(i,origText){
+        					return "旧文本: " + origText + " 新文本: Hello world! (index: " + i + ")"; 
+   						 });
+   						 
+   						 $("#runoob").attr("href", function(i,origValue){
+    						return origValue + "/jquery"; 
+ 						 });
+ 			10.添加元素
+ 					1.append()    内部添加
+ 					2.prepend()
+ 					3.after()     外部添加
+ 					4.before()
+ 					//可以添加若干个元素
+ 			11.删除元素
+ 					1.remove()  被选元素和子元素
+ 					2.empty()   子元素
+ 					过滤
+ 						$("p").remove(".italic");
+ 			12.css类
+ 				操作css
+ 						1.addClass()     向被选元素添加一个或多个类
+ 						2.removeClass(); 从被选元素删除一个或多个类
+ 						3.toggleClass()  对被选元素进行添加/删除类的切换操作
+ 						4.css()          设置或返回样式属性
+ 				css
+ 						1.返回css属性
+ 								$("p").css("background-color");
+ 						2.设置属性
+ 								$("p").css("background-color","yellow");
+ 						3.设置多个属性
+ 								$("p").css({"background-color":"yellow","font-size":"200%"});
+		-->
+		
+	</body>
+</html>
