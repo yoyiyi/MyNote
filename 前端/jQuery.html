@@ -8,6 +8,7 @@
 	<body>
 		<!-- 1.基础语法 
 			 $(seletor).action
+			 $("a[target='_blank']") $("button[name="fk]")
 		-->
 		<!-- 2.文档加载
 		  $(function(){
@@ -59,7 +60,7 @@
 				          .slideUp(2000)
 				         .slideDown(2000);	         
 		-->     
-		<!-- 
+		<!--
 			7.获取内容  text() html() val()
 			8.获取属性 attr()  alert($("#runoob").attr("href"));
 			9.设置内容和属性 text("Hello world!") html("<b>Hello world!</b>") val("RUNOOB")
@@ -102,6 +103,31 @@
  						3.设置多个属性
  								$("p").css({"background-color":"yellow","font-size":"200%"});
 		-->
+		<!--
+         	13.尺寸
+         		width、height、innerWidth、innerHeight、outerWidth、outerheight
+        -->
+        <!-- 
+        	14.遍历   DOM遍历
+        			祖先：
+        				parent()(直接祖先)  parents()(所有祖先)  parentUntil()(两个元素之间祖先) 
+        													   $("span").parentsUntil("div")
+        			后代：
+        				children() find()
+        			同胞：
+        				siblings() next() nextAll() nextUntit() prev() prevAll() prevUntit()
+        	15.过滤
+        			first() last() eq() filter() not()
+        			
+        	16.Ajax
+        		异步的js和xml
+        			1.load(url,data,callback)  $("#div1").load("demo_test.txt");
+        		  	  function(responseTxt,statusTxt,xhr)
+        		  	2.$.get(URL,callback)   function(data,status)
+        		  	3.$.post(URL,data,callback);  data{ name: ,url:} function(data,status)
+        	17. noConglict() 与其他框架冲突
+        	18.JSONP
+        -->
 		
 	</body>
 </html>
