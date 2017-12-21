@@ -66,7 +66,10 @@
 	       background:red url(1.png) no-repeat 30px 40px scroll 没有顺序要求
   
 11.文字高度
-        行高 = 文字高度  + 上下边距
+         
+		文字默认是16px  
+		 
+        行高 = 文字高度  +    
 		
 		行高单位	文字大小	值
 		20px	    20px	    20px
@@ -99,7 +102,7 @@
 				
 	    border:0 none         去掉边框
 		outline-style:none    去掉轮廓线
-	               
+	                 
 	    获取焦点
 				label for id   
 				        .fk:focus{background:red}
@@ -119,27 +122,6 @@
 			◆嵌套的盒子外边距塌陷
 				解决方法:   1.给父盒子设置边框
 							2.给父盒子overflow:hidden;   bfc   格式化上下文
-							
-16. 文档流 浮动布局（float：left  right）
-
-17.清除浮动 
-			1.clear：both
-			2.父元素 overflow：hidden
-			
-18.overflow
-			:visible
-			:hidden
-			:scroll
-			:auto
-			
-19.定位
-		定位方向: left  | right  | top  | bottom
-		position：static  静态定位。默认值，就是文档流
-		Position:absolute; 绝对定位
-		Position: relative; 相对定位
-		Position:fixed; 固定定位
-
-
 
 	   
 	   

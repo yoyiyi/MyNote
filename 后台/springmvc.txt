@@ -46,8 +46,10 @@
 
 2.注解
 		1.@Controller    类
-		2.@ResquestMapping（/ceshi.action） 方法 类（指定前缀）@ResquestMapping("item")
+		2.@ResquestMapping（/ceshi.action） 方法              类（指定前缀）@ResquestMapping("item")
 				@RequestMapping(method = RequestMethod.GET) 请求方法 数组 {}
+				1.限定方法
+				2.get post都可以 				
 		3.@RequestParam(value="",required="true/false",defaultValue="")
 		
 3.框架架构
@@ -126,6 +128,14 @@
 				http://blog.csdn.net/h3243212/article/details/50885288
 				
 18.restful支持
+                //返回json
+				@RequestMapping("testJson")
+				// @ResponseBody
+				public @ResponseBody Item testJson(@RequestBody Item item) {
+					return item;
+				}
+
+
 				/**
 				 * 使用RESTful风格开发接口，实现根据id查询商品
 				 * 

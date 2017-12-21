@@ -34,4 +34,8 @@
 	
   3.gradle -q helloWorld
   
-6.
+6.任务缩写
+	gradle -q hW
+	
+7.排除任务
+	gradle hW -x fuck
