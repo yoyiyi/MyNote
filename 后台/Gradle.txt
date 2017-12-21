@@ -14,3 +14,24 @@
 	  verify->对组装工件运行校验检查
 	  install->安装工件到本地仓库
 	  deploy->共享文件到远程仓库
+	  
+4.Gradle
+	1.安装 
+	2.设置环境变量 GRADLE_HOME 
+	3.查看  gradle -v
+	
+5.helloWorld
+  1.新建 build.gradle
+  2.task helloWorld(){
+     doLast{
+	   println 'Hello World'
+	 }
+	}
+	
+	task helloWorld << {
+	  println 'Hello World'
+	}
+	
+  3.gradle -q helloWorld
+  
+6.
