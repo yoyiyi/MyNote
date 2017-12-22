@@ -1,2 +1,18 @@
 1.Android系统框架
 	Linux内核层 系统运行库层 引用框架层 应用层
+
+2.logt
+
+3.Intent
+	1.显性
+	2.隐性
+		1.action
+		2.category 多个
+		3.data
+			android scheme
+			android host
+					path
+					port
+					mimeType
+
+4.intent putExtra 传递信息

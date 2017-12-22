@@ -1,0 +1,11 @@
+1.jdk
+	java程序设计语言 java虚拟机 java api类库
+
+2.jre
+	java se api子集 java虚拟机
+
+3.
+	java card 小设备 智能卡
+	java me 移动
+	java ee 企业 erp
+	java se  桌面 
