@@ -25,7 +25,6 @@
 	详解：https://www.cnblogs.com/lwbqqyumidi/p/3769113.html
 	
 3.Activity任务栈模式
-	这种题目出现概率挺大的。
 	栈：先进后出
 	清单文件中配置android:launchMode=""
 	1.standard：一个一个往上叠
@@ -42,6 +41,76 @@
 	详解：1.https://www.jianshu.com/p/1da4541b70ad
 		  2.http://blog.csdn.net/wangbf_java/article/details/72815820
 		  
+5.如何判断是否有sd卡
+	1.Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)
+	
+6.Android数据存储方式
+	文件 xml sharedpreference sqlite ContentProvider 网络
+	
+7.Android进程级别
+	前台 可见 服务 后台 空
+	详解：https://www.cnblogs.com/jiuguimianju/p/4162102.html
+	
+8.Activity四种状态
+	Running状态 Paused状态 Stopped状态 Killed状态
+	详解：http://www.jb51.net/article/98160.html
+	
+9.如何保存Activity状态
+	覆写onSaveInstanceState()   onRestoreInstanceState()
+	详解：http://blog.csdn.net/timejay/article/details/52838221
+
+10.将Activity设置成窗口模式
+	android:theme="@android:style/Theme.Dialog"
+	
+11.service是否在main thread执行，service是否能执行耗时操作
+	默认情况下是
+	service不建议执行耗时操作，除非设置android:process 或者使用IntentService
+	
+12.service启动方法，有什么区别
+	1.bindService()  与启动的Context绑定 会一起挂
+	2.startService() 与启动Context生命周期无关
+	3.都需要在xml里面注册
+	
+13.如何判断应用被强杀
+	在Application里面初始化一个static常量，赋值为-1，在欢迎界面改为0，如果被强杀，application重新初始化
+	，在BaseActivity里面判断常量值
+	
+14.如何保证service不被杀死
+	这玩意安卓版本高了，也难搞了
+	1.service设置成START_STICKY
+	2.提升优先级 在intent-filter设置android:priority = "1000" 1000最高值
+	3.提升service进程优先级 设置为前台进程
+	4.onDestroy中启动Service 
+		1.onDestroy中发送广播 
+		2.onDestroy中startService
+	5.在jni层，用c代码fork一个进程出来
+	6.root手机，把应用装到系统里面
+	7.像qq一样放一个像素在桌面
+	8.监听系统广播 比如开机，亮屏等
+	详解：http://blog.csdn.net/mad1989/article/details/22492519
+		
+15.安卓动画
+	1.补间动画
+	2.帧动画
+	3.属性动画
+	4.矢量动画 svg
+	详解：https://www.jianshu.com/p/420629118c10
+	
+16.安卓性能优化(重点中重点)
+	详解：1.https://github.com/OpenDevTeam/OpenBox/tree/master/topic
+		  2.https://zhuanlan.zhihu.com/p/23664598
+		  
+17.service中可以弹吐司吗
+	完全可以，service是context子类
+	
+18.广播分几种
+	有序广播
+	无序广播
+	
+19.Android解析xml
+	sax pull dom
+	详解：http://blog.csdn.net/liuhe688/article/details/6415593/
+
 100.各种原理部分
 	有些面试官是大佬，管你三七二十一，往死里问底层原理，甚至叫你设计、优化第三方常用库。
 	举个栗子；
