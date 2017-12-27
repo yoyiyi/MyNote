@@ -1,0 +1,50 @@
+1.View ViewGroup
+
+2.坐标系
+	Android坐标系 getRawX ... 
+	View 坐标系   getX ... getTop l r b
+	
+3.滑动
+	1.layout()
+	2.offsetLeftAndRight() T B
+	3.LayoutParams
+	4.动画
+	5.scrollTo（具体） scrollBy（增量）
+	6.Scroller 和computerScroll()一起使用
+	
+4.属性动画
+	1.AnimatorSet 组合
+		1.after
+		2.after(long delay) 延迟
+		3.before
+		4.with
+	2.ObjectAnimator
+		1.addListener(new AnimatorLisener new AnimatorListenerAdapter)
+	3.ValueAnimator
+		1.addUpdateListener
+	5.PropertyValueHolder 组合
+	
+5.xml动画
+
+6.组成
+	Activity
+		PhoneWidow
+			DecorView
+				TitleView ContentView
+				
+7.事件分发机制
+	dispathTouchEvent   分发
+	onInterceptEvent	拦截  View没有 ViewGroupyou
+	onTouchEvent		处理
+	
+    onTouchListerner() onTouch() > onTouchEvent()
+	
+	封装MotionEvent->Activity->PhoneWindow-DecorView->ViewGroup
+	
+8.View 工作流程
+	measure layout draw
+	
+	
+	
+	
+	
