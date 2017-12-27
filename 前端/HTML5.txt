@@ -1,0 +1,60 @@
+1.自动对焦
+	autofocus
+	
+2.代替div
+	header
+	nav
+	article
+	section
+	
+3.html5定义 <!DOCTYPE html>
+
+4.字符集
+	<meta http-equiv="Content-type" content="text/html;charset=gb2312"/>
+	<meta charset="gb2312"/>
+	
+5.允许省略属性值属性
+
+6.属性值不使用""
+
+7.文本
+	b i em strong small sub sup <bdo dir="rtl|ltr">
+	
+8.语义
+	abbr address blockquote q cite code del ins pre samp kbd var
+	
+9.超链接和锚点
+	a
+		href
+		target
+10.表格
+	
+11.iframe
+
+12.contentEditable 可编辑
+
+13.designMode 编辑
+
+14.hidden 隐藏
+
+15.mark time
+
+16.meter progress
+
+17.draggable 拖放
+
+18.form formaction(提交不同) formxxx
+
+19.autofocus 自动对焦
+
+20.palaceholder 默认显示
+
+21.list datalist autocomplete
+
+22.filelist file
+
+23.checkValidity
+
+23.canvas
+
+24.audio video

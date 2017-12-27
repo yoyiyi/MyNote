@@ -1,0 +1,19 @@
+1.gradle -q
+
+2.<< 代替doLast
+	
+3.打印循环
+	task count << {
+	  4.times {
+	   print "$it" // 0 1 2 3
+	  }
+	}
+	
+4.GroovyJDK方法
+	例如：
+		task test << {
+			String name = "fuck";
+			name.each() {
+			 println "${it}";
+			}
+		}

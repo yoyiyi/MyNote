@@ -1,0 +1,52 @@
+1.声明bean
+	@Component
+	@Service
+	@Repository
+	@Controller
+	
+2.注入bean
+	@Autowired
+	@Inject
+	@Resource
+
+3.Scope
+	singleton 默认 @Scope("singleton")
+	prototype
+	request
+	session
+	globalsession
+	
+4.@Value
+
+5.bean 初始化和销毁
+	1.java：@Bean的initMethod和destroyMethod   @Bean(initMethod="init",destroyMethod="destroy") //1
+	2.JSR-250 @PostConstruct和PreConstruct
+	
+6.profile配置
+	1.@Profile("dev") 
+	2.@Profile("prod") 
+	
+7.事件
+	1.自定义事件继承ApplicationEvent
+	2.实现监听 实现ApplicationListener
+	3.容器发布事件 ApplicationContext publishEvent
+	
+8.spring aware 获取spring提供的aware接口
+
+9.多任务
+	通过TaskExecutor
+	ThreadPoolTaskExecutor
+	@EnableAsync 配置类
+	Bean使用@Async
+	
+10.计划任务
+	配置类 @EnableScheduling
+	执行方法 @Scheduled
+	cron
+	
+11.条件注解@Conditional
+
+12.组合注解
+
+	
+
