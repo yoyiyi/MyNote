@@ -44,7 +44,56 @@
 8.View 工作流程
 	measure layout draw
 	
+9.AT_MOST UNSPECIFIED EXACTLY
 	
+10
+	自定义View
+	自定义ViewGroup
+	组合控件
+	
+11.进程
+
+12.线程状态
+	New Runnable Blocked Waiting Timed waiting Terminated
+	新建 可运行 阻塞  等待 超时等待 终止
+	
+13.创建线程
+	Thread
+	Runnable
+	Callable
+	
+14.中断
+	interrupt
+	boolean
+	
+15.判断是否中断
+	Thread.currentThread().interrupted()
+	
+16.重入锁与条件对象
+	1.ReentrantLock 重复加锁
+	2.Condition  
+				 condition.await
+				 signalAll 激活
+				 signal
+				 
+17.内存模型 啥
+	原子
+	可见
+	有序
+	
+18.Volatile
+	1.修改变量对其他可见
+	2.禁止使用指令重排序
+		使用
+			1.状态标志
+			2.双重检查模式(DCL)
+			
+19.阻塞队列
+	1.队列没有数据 消费者挂起
+	2.队列满了	   生产者挂起
+	
+	分类
+		1.ArrayBlockingQueue
 	
 	
 	
