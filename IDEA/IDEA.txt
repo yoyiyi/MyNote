@@ -1,0 +1,29 @@
+1.窗口
+	项目	Alt+1
+	终端	Alt+F12
+	编辑器	Esc	
+2.自由模式	Ctrl+Shift+F12
+3.导航栏	Alt+Home
+4.搜索功能	Ctrl+Shift+A
+5.按名称查找行为	Ctrl+Shift+A
+6.显示可用意图行为的列表	Alt+Enter
+7.在视图 (项目、结构等) 之间切换	Alt+F1
+8.在编辑器中打开的工具窗口和文件之间切换	Ctrl+Tab
+9.显示导航栏	Alt+Home
+10.插入实时模板		Ctrl+J
+11.用实时模板环绕	Ctrl+Alt+J
+12.从项目或其他树视图编辑项目	F4
+13.使用行或块注释来注释或取消注释行或代码段		Ctrl+/ 	Ctrl+Shift+/
+14.按名称查找类或文件	Ctrl+N 	Ctrl+Shift+N
+15.复制当前行或选择.	Ctrl+D
+16.增量表达式选择.		Ctrl+W	Ctrl+Shift+W
+17.在当前文件查找/替换文本字符串.		Ctrl+F  Ctrl+R
+18.在项目或指定的目录中查找/替换文本	Ctrl+Shift+F 	Ctrl+Shift+R
+19.四处搜索	双按 shift
+20.快速查看所选符号的用法	Ctrl+Shift+F7
+11.在编辑器中展开或折叠代码片段	Ctrl+NumPad Plus Ctrl+NumPad -
+21.调用代码完成		Ctrl+Space
+22.完成 Smart 声明	N/A
+23.完成 Smart	Ctrl+Shift+Space
+24.显示可用的重构（重构该列表）	Ctrl+Shift+Alt+T
+25.比较文件	选中两个文件 Ctrl+D

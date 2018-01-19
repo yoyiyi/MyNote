@@ -1,0 +1,8 @@
+1.filter
+2.stream
+3.parallelStream	并行流
+4.count		数量
+5.创建流
+	1.Stream.of()
+	2.Stream.empty()
+	3.Stream.generate()

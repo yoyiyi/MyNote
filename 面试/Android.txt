@@ -99,6 +99,7 @@
 16.安卓性能优化(重点中重点)
 	详解：1.https://github.com/OpenDevTeam/OpenBox/tree/master/topic
 		  2.https://zhuanlan.zhihu.com/p/23664598
+		  3.https://mp.weixin.qq.com/s/YPwApikK57BMu-FbnxbSHg
 		  
 17.service中可以弹吐司吗
 	完全可以，service是context子类
